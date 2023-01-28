@@ -1,0 +1,280 @@
+WARNING | 2023-01-28 10:55:48,742 | main.py:44 | BOT WAS STARTED
+ERROR | 2023-01-28 11:53:02,431 | dispatcher.py:390 | Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\bot\base.py", line 226, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\client.py", line 560, in _request
+    await resp.start(conn)
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\client_reqrep.py", line 894, in start
+    with self._timer:
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\helpers.py", line 720, in __exit__
+    raise asyncio.TimeoutError from None
+TimeoutError
+ERROR | 2023-01-28 15:09:27,433 | dispatcher.py:390 | Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\bot\base.py", line 226, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\client.py", line 560, in _request
+    await resp.start(conn)
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\client_reqrep.py", line 894, in start
+    with self._timer:
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\helpers.py", line 720, in __exit__
+    raise asyncio.TimeoutError from None
+TimeoutError
+ERROR | 2023-01-28 15:10:17,452 | main_errors.py:62 | Exception: name 'polimoaney' is not defined
+Update: {"update_id": 455395556, "callback_query": {"id": "6123452014688833900", "from": {"id": 5720694569, "is_bot": false, "first_name": "Макс", "username": "Makssssssssssssssssssq", "language_code": "ru"}, "message": {"message_id": 124, "from": {"id": 5592658763, "is_bot": true, "first_name": "BeeGreenInfo", "username": "BeeGreenInfo_bot"}, "chat": {"id": 5720694569, "first_name": "Макс", "username": "Makssssssssssssssssssq", "type": "private"}, "date": 1674907812, "text": "📜 Правила Магазина", "entities": [{"type": "bold", "offset": 0, "length": 19}], "reply_markup": {"inline_keyboard": [[{"text": "👨‍💻 Правила для клиента ", "callback_data": "policlient"}], [{"text": "📦 Политика ненаходов ", "callback_data": "policnet"}], [{"text": "📑 Политика возрата", "callback_data": "polimoaney"}], [{"text": "📜 Форма Диспута", "callback_data": "FormaDisp"}]]}}, "chat_instance": "-5214157973891611399", "data": "polimoaney"}}
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 139, in user_faq
+    return polimoaney
+           ^^^^^^^^^^
+NameError: name 'polimoaney' is not defined
+ERROR | 2023-01-28 15:10:17,467 | base_events.py:1765 | Task exception was never retrieved
+future: <Task finished name='Task-280' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=NameError("name 'polimoaney' is not defined")>
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 139, in user_faq
+    return polimoaney
+           ^^^^^^^^^^
+NameError: name 'polimoaney' is not defined
+ERROR | 2023-01-28 15:18:12,141 | main_errors.py:62 | Exception: name 'polimoaney' is not defined
+Update: {"update_id": 455395558, "callback_query": {"id": "5962407484880506203", "from": {"id": 5683198468, "is_bot": false, "first_name": "BeGreenSupp", "username": "BeGreenSupp6666", "language_code": "en"}, "message": {"message_id": 127, "from": {"id": 5592658763, "is_bot": true, "first_name": "BeeGreenInfo", "username": "BeeGreenInfo_bot"}, "chat": {"id": 5683198468, "first_name": "BeGreenSupp", "username": "BeGreenSupp6666", "type": "private"}, "date": 1674908288, "text": "📜 Правила Магазина", "entities": [{"type": "bold", "offset": 0, "length": 19}], "reply_markup": {"inline_keyboard": [[{"text": "👨‍💻 Правила для клиента ", "callback_data": "policlient"}], [{"text": "📦 Политика ненаходов ", "callback_data": "policnet"}], [{"text": "📑 Политика возрата", "callback_data": "polimoaney"}], [{"text": "📜 Форма Диспута", "callback_data": "FormaDisp"}]]}}, "chat_instance": "-3341403668664497484", "data": "polimoaney"}}
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 139, in user_faq
+    return polimoaney
+           ^^^^^^^^^^
+NameError: name 'polimoaney' is not defined
+ERROR | 2023-01-28 15:18:12,157 | base_events.py:1765 | Task exception was never retrieved
+future: <Task finished name='Task-312' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=NameError("name 'polimoaney' is not defined")>
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 139, in user_faq
+    return polimoaney
+           ^^^^^^^^^^
+NameError: name 'polimoaney' is not defined
+ERROR | 2023-01-28 15:18:25,593 | main_errors.py:62 | Exception: name 'FormaDisp' is not defined
+Update: {"update_id": 455395559, "callback_query": {"id": "5962407485468438107", "from": {"id": 5683198468, "is_bot": false, "first_name": "BeGreenSupp", "username": "BeGreenSupp6666", "language_code": "en"}, "message": {"message_id": 127, "from": {"id": 5592658763, "is_bot": true, "first_name": "BeeGreenInfo", "username": "BeeGreenInfo_bot"}, "chat": {"id": 5683198468, "first_name": "BeGreenSupp", "username": "BeGreenSupp6666", "type": "private"}, "date": 1674908288, "text": "📜 Правила Магазина", "entities": [{"type": "bold", "offset": 0, "length": 19}], "reply_markup": {"inline_keyboard": [[{"text": "👨‍💻 Правила для клиента ", "callback_data": "policlient"}], [{"text": "📦 Политика ненаходов ", "callback_data": "policnet"}], [{"text": "📑 Политика возрата", "callback_data": "polimoaney"}], [{"text": "📜 Форма Диспута", "callback_data": "FormaDisp"}]]}}, "chat_instance": "-3341403668664497484", "data": "FormaDisp"}}
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 153, in user_faq
+    return FormaDisp
+           ^^^^^^^^^
+NameError: name 'FormaDisp' is not defined
+ERROR | 2023-01-28 15:18:25,593 | base_events.py:1765 | Task exception was never retrieved
+future: <Task finished name='Task-316' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=NameError("name 'FormaDisp' is not defined")>
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 153, in user_faq
+    return FormaDisp
+           ^^^^^^^^^
+NameError: name 'FormaDisp' is not defined
+ERROR | 2023-01-28 15:18:36,275 | main_errors.py:62 | Exception: name 'policnet' is not defined
+Update: {"update_id": 455395560, "callback_query": {"id": "5962407483464874119", "from": {"id": 5683198468, "is_bot": false, "first_name": "BeGreenSupp", "username": "BeGreenSupp6666", "language_code": "en"}, "message": {"message_id": 127, "from": {"id": 5592658763, "is_bot": true, "first_name": "BeeGreenInfo", "username": "BeeGreenInfo_bot"}, "chat": {"id": 5683198468, "first_name": "BeGreenSupp", "username": "BeGreenSupp6666", "type": "private"}, "date": 1674908288, "text": "📜 Правила Магазина", "entities": [{"type": "bold", "offset": 0, "length": 19}], "reply_markup": {"inline_keyboard": [[{"text": "👨‍💻 Правила для клиента ", "callback_data": "policlient"}], [{"text": "📦 Политика ненаходов ", "callback_data": "policnet"}], [{"text": "📑 Политика возрата", "callback_data": "polimoaney"}], [{"text": "📜 Форма Диспута", "callback_data": "FormaDisp"}]]}}, "chat_instance": "-3341403668664497484", "data": "policnet"}}
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 121, in user_faq
+    return policnet
+           ^^^^^^^^
+NameError: name 'policnet' is not defined
+ERROR | 2023-01-28 15:18:36,275 | base_events.py:1765 | Task exception was never retrieved
+future: <Task finished name='Task-320' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=NameError("name 'policnet' is not defined")>
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 121, in user_faq
+    return policnet
+           ^^^^^^^^
+NameError: name 'policnet' is not defined
+ERROR | 2023-01-28 15:19:43,552 | main_errors.py:62 | Exception: name 'policlient' is not defined
+Update: {"update_id": 455395561, "callback_query": {"id": "5962407484120067142", "from": {"id": 5683198468, "is_bot": false, "first_name": "BeGreenSupp", "username": "BeGreenSupp6666", "language_code": "en"}, "message": {"message_id": 127, "from": {"id": 5592658763, "is_bot": true, "first_name": "BeeGreenInfo", "username": "BeeGreenInfo_bot"}, "chat": {"id": 5683198468, "first_name": "BeGreenSupp", "username": "BeGreenSupp6666", "type": "private"}, "date": 1674908288, "text": "📜 Правила Магазина", "entities": [{"type": "bold", "offset": 0, "length": 19}], "reply_markup": {"inline_keyboard": [[{"text": "👨‍💻 Правила для клиента ", "callback_data": "policlient"}], [{"text": "📦 Политика ненаходов ", "callback_data": "policnet"}], [{"text": "📑 Политика возрата", "callback_data": "polimoaney"}], [{"text": "📜 Форма Диспута", "callback_data": "FormaDisp"}]]}}, "chat_instance": "-3341403668664497484", "data": "policlient"}}
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 106, in user_faq
+    return policlient
+           ^^^^^^^^^^
+NameError: name 'policlient' is not defined
+ERROR | 2023-01-28 15:19:43,552 | base_events.py:1765 | Task exception was never retrieved
+future: <Task finished name='Task-327' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=NameError("name 'policlient' is not defined")>
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 106, in user_faq
+    return policlient
+           ^^^^^^^^^^
+NameError: name 'policlient' is not defined
+ERROR | 2023-01-28 16:31:51,256 | dispatcher.py:390 | Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\bot\base.py", line 226, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\client.py", line 560, in _request
+    await resp.start(conn)
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\client_reqrep.py", line 894, in start
+    with self._timer:
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiohttp\helpers.py", line 720, in __exit__
+    raise asyncio.TimeoutError from None
+TimeoutError
+ERROR | 2023-01-28 16:32:21,353 | main_errors.py:62 | Exception: name 'polimoaney' is not defined
+Update: {"update_id": 455395570, "callback_query": {"id": "1773991716437669341", "from": {"id": 413039633, "is_bot": false, "first_name": "Akis", "username": "dms117", "language_code": "ru"}, "message": {"message_id": 147, "from": {"id": 5592658763, "is_bot": true, "first_name": "BeeGreenInfo", "username": "BeeGreenInfo_bot"}, "chat": {"id": 413039633, "first_name": "Akis", "username": "dms117", "type": "private"}, "date": 1674912737, "text": "📜 Правила Магазина", "entities": [{"type": "bold", "offset": 0, "length": 19}], "reply_markup": {"inline_keyboard": [[{"text": "👨‍💻 Правила для клиента ", "callback_data": "policlient"}], [{"text": "📦 Политика ненаходов ", "callback_data": "policnet"}], [{"text": "📑 Политика возрата", "callback_data": "polimoaney"}], [{"text": "📜 Форма Диспута", "callback_data": "FormaDisp"}]]}}, "chat_instance": "-7289464052768907376", "data": "polimoaney"}}
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 139, in user_faq
+    return polimoaney
+           ^^^^^^^^^^
+NameError: name 'polimoaney' is not defined
+ERROR | 2023-01-28 16:32:21,353 | base_events.py:1765 | Task exception was never retrieved
+future: <Task finished name='Task-561' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=NameError("name 'polimoaney' is not defined")>
+Traceback (most recent call last):
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\AppData\Roaming\Python\Python311\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Main\Documents\InfoShop\tgbot\handlers\user_menu.py", line 139, in user_faq
+    return polimoaney
+           ^^^^^^^^^^
+NameError: name 'polimoaney' is not defined
